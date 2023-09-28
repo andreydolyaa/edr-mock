@@ -1,0 +1,7 @@
+{
+  "HOST": "localhost",
+  "PORT": 6500,
+  "DB_HOST": "localhost",
+  "DB_PORT": 27017,
+  "DB_NAME": "mock-server"
+}
