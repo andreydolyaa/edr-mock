@@ -1,7 +1,8 @@
 import { startServer } from "./server.js";
 import { connectDb } from "./src/core/db.js";
-import { generateDevices } from "./src/modules/device/device.js";
+import { generateMockData } from "./src/data-generator/index.js";
+
 
 startServer()
   .then(connectDb)
-  .then(generateDevices)
+  .then(generateMockData)
