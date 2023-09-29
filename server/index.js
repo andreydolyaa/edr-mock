@@ -5,4 +5,4 @@ import { generateMockData } from "./src/data-generator/index.js";
 
 startServer()
   .then(connectDb)
-  .then(generateMockData)
+  // .then(generateMockData)

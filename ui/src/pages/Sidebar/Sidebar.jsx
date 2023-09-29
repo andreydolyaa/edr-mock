@@ -1,4 +1,4 @@
-import Subtitle from "../Components/Subtitle";
+import Subtitle from "../../components/Subtitle";
 import Category from "./_Category";
 import Logo from "./_Logo";
 

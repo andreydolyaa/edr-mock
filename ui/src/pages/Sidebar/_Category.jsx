@@ -1,4 +1,4 @@
-import { iconsMapping } from "../Icons/index";
+import { iconsMapping } from "../../icons/index";
 import { NavLink } from "react-router-dom";
 
 const Category = ({ name, icon, link }) => {

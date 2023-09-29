@@ -1,4 +1,4 @@
-import { Hexagon } from "../Icons/Hexagon";
+import { Hexagon } from "../../icons/Hexagon";
 const Logo = () => {
   return (
     <div className="logo">

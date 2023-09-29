@@ -1,15 +1,15 @@
-import Dashboard from "./Dashboard/Dashboard";
-import EventLogs from "./EventLogs/EventLogs";
-import Alerts from "./Alerts/Alerts";
-import ThreatIntl from "./ThreatIntl/ThreatIntl";
-import Reports from "./Reports/Reports";
-import UserActivity from "./UserActivity/UserActivity";
-import Settings from "./Settings/Settings";
-import NetworkTraffic from "./NetworkTraffic/NetworkTraffic";
-import Sidebar from "./Sidebar/Sidebar";
-import Topbar from "./Topbar/Topbar";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import EventLogs from "./pages/EventLogs/EventLogs";
+import Alerts from "./pages/Alerts/Alerts";
+import ThreatIntl from "./pages/ThreatIntl/ThreatIntl";
+import Reports from "./pages/Reports/Reports";
+import UserActivity from "./pages/UserActivity/UserActivity";
+import Settings from "./pages/Settings/Settings";
+import NetworkTraffic from "./pages/NetworkTraffic/NetworkTraffic";
+import Incidents from "./pages/Incidents/Incidents";
+import Sidebar from "./pages/Sidebar/Sidebar";
+import Topbar from "./pages/Topbar/Topbar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Incidents from "./Incidents/Incidents";
 
 function App() {
   return (

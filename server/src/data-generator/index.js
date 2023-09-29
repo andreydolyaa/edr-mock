@@ -21,8 +21,8 @@ export const generateMockData = async () => {
     .then(createThreats)
     .then(createNetworks)
     .then(createReports)
-    .then(createUsersActivity)
-    // .catch();
+    .then(createUsersActivity);
+  // .catch();
 };
 
 export const createLogs = async () => {
@@ -110,14 +110,15 @@ export const createUsersActivity = async () => {
 };
 
 export const calculateTotalDataLength = async () => {
-  totalDataLength =
+  return (
     logsData.length +
     alertsData.length +
     incidentData.length +
     threatIntlData.length +
     networksData.length +
     reportsData.length +
-    usersData.length;
+    usersData.length
+  );
 };
 
 export const calculateProgress = (itemsCount, index, type) => {
