@@ -4,6 +4,8 @@ const initialState = {
   items: [],
   loading: false,
   error: null,
+  currentPage: 1,
+  itemsPerPage: 10,
 };
 
 const logsSlice = createSlice({
@@ -22,9 +24,12 @@ const logsSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
+    updatePage: (state, action) => {
+      state.currentPage = action.payload;
+    },
   },
   extraReducers: () => {},
 });
 
-export const { setData, setLoading, setError } = logsSlice.actions;
+export const { setData, setLoading, setError, updatePage } = logsSlice.actions;
 export default logsSlice.reducer;
