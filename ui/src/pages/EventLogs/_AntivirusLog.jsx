@@ -1,5 +1,5 @@
 const AntivirusLog = ({ log }) => {
-  return <div className="antivirus-log">AntivirusLog</div>;
+  return <div className="log antivirus-log">AntivirusLog {JSON.stringify(log)}</div>;
 };
 
 export default AntivirusLog;

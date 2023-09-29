@@ -1,5 +1,5 @@
 const AuthLog = ({ log }) => {
-  return <div className="auth-log">AuthLog</div>;
+  return <div className="log auth-log">AuthLog {JSON.stringify(log)}</div>;
 };
 
 export default AuthLog;

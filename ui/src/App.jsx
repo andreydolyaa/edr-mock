@@ -18,17 +18,19 @@ function App() {
         <Sidebar />
         <div className="sub-app">
           <Topbar />
-          <Routes>
-            <Route exact path="/" element={<Dashboard />} />
-            <Route exact path="/event-logs" element={<EventLogs />} />
-            <Route exact path="/alerts" element={<Alerts />} />
-            <Route exact path="/incidents" element={<Incidents />} />
-            <Route exact path="/threat-intl" element={<ThreatIntl />} />
-            <Route exact path="/network-traffic" element={<NetworkTraffic />} />
-            <Route exact path="/reports" element={<Reports />} />
-            <Route exact path="/users-activity" element={<UserActivity />} />
-            <Route exact path="/settings" element={<Settings />} />
-          </Routes>
+          <div className="app-routes">
+            <Routes>
+              <Route exact path="/" element={<Dashboard />} />
+              <Route exact path="/event-logs" element={<EventLogs />} />
+              <Route exact path="/alerts" element={<Alerts />} />
+              <Route exact path="/incidents" element={<Incidents />} />
+              <Route exact path="/threat-intl" element={<ThreatIntl />} />
+              <Route exact path="/network-traffic" element={<NetworkTraffic />} />
+              <Route exact path="/reports" element={<Reports />} />
+              <Route exact path="/users-activity" element={<UserActivity />} />
+              <Route exact path="/settings" element={<Settings />} />
+            </Routes>
+          </div>
         </div>
       </div>
     </Router>

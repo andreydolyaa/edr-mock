@@ -1,5 +1,5 @@
 const ActiveDirLog = ({ log }) => {
-  return <div className="active-dir-log">ActiveDirLog</div>;
+  return <div className="log active-dir-log">ActiveDirLog {JSON.stringify(log)}</div>;
 };
 
 export default ActiveDirLog;
