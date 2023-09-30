@@ -1,11 +1,11 @@
 .logs {
   .log {
     border-bottom: 1px solid rgb(34, 37, 44);
-    padding: 20px 0;
+    padding: 30px 0;
     color: rgb(192, 192, 192);
     cursor: pointer;
     transition: 0.2s;
-    font-size: 13px;
+    // font-size: 13px;
     .title {
       display: flex;
       justify-content: space-between;
@@ -15,6 +15,8 @@
       color: white;
       font-size: 13px;
       margin-top: 15px;
+      // transition: .3s;
+      animation: fade-in .3s;
       .msg {
         font-family: "Space Mono";
         padding: 15px 0;

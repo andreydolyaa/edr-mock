@@ -16,7 +16,7 @@ const NetworkLog = ({ log }) => {
         <ChevronUp conditional={details ? "rotate" : "rotate-back"} />
       </div>
       {details && (
-        <div className="details">
+        <div className="details fade-in">
           <div className="msg">
             Anomaly Detected: <span className="anomaly">{log.anomalyDetected}</span>
           </div>
