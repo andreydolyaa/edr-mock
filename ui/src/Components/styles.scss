@@ -2,4 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .buttons {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    button {
+      border: none;
+      background-color: transparent;
+      display: flex;
+    }
+    
+    .pages {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90px;
+    }
+    svg {
+      height: 20px;
+      width: 20px;
+      stroke-width: 2.5;
+    }
+  }
 }

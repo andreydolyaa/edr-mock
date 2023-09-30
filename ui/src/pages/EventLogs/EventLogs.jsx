@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchEventLogs, updateCurrentPage } from "../../redux/actions/logsActions";
-import { useEffect } from "react";
+import { fetchModelCount } from "../../services/counts";
+import { useEffect, useState } from "react";
 import Log from "./_Log";
 import Toolbar from "../../components/Toolbar";
 
@@ -11,9 +12,15 @@ const EventLogs = () => {
   const error = useSelector((state) => state.logs.error);
   const currentPage = useSelector((state) => state.logs.currentPage);
   const itemsPerPage = useSelector((state) => state.logs.itemsPerPage);
+  const [modelCount, setModelCount] = useState(null);
+  const MODEL = "Log"
 
   useEffect(() => {
     dispatch(fetchEventLogs(currentPage, itemsPerPage));
+    fetchModelCount(MODEL).then((count) => {
+      // console.log(count);
+      setModelCount(count[MODEL]);
+    });
   }, [dispatch, currentPage, itemsPerPage]);
 
   const handlePageChange = (newPage) => {
@@ -29,7 +36,7 @@ const EventLogs = () => {
         name={"Event Type:"}
         handlePageChange={handlePageChange}
         currentPage={currentPage}
-        dataLength={logs.length}
+        dataLength={modelCount}
         itemsPerPage={itemsPerPage}
       />
       {logs.map((x) => {
