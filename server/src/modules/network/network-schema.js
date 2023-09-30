@@ -32,6 +32,13 @@ const networkTrafficSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  id: {
+    type: String,
+    default: function () {
+      return this._id;
+    },
+    index: true,
+  },
 });
 
 export const Network = mongoose.model("Network", networkTrafficSchema);

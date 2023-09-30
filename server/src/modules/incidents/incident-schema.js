@@ -26,6 +26,13 @@ const incidentSchema = new mongoose.Schema({
     enum: ["Open", "Closed"],
     default: "Open",
   },
+  id: {
+    type: String,
+    default: function () {
+      return this._id;
+    },
+    index: true,
+  },
 });
 
 export const Incident = mongoose.model("Incident", incidentSchema);

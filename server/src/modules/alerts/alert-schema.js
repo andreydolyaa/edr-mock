@@ -22,6 +22,13 @@ const alertSchema = new mongoose.Schema({
     enum: ["Open", "Closed"],
     default: "Open",
   },
+  id: {
+    type: String,
+    default: function () {
+      return this._id;
+    },
+    index: true,
+  },
 });
 
 export const Alert = mongoose.model("Alert", alertSchema);

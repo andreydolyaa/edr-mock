@@ -31,9 +31,13 @@ const threatIntelligenceSchema = new mongoose.Schema({
   },
   tags: [String],
   referenceLinks: [String],
+  id: {
+    type: String,
+    default: function () {
+      return this._id;
+    },
+    index: true,
+  },
 });
 
-export const Threat = mongoose.model(
-  "Threat",
-  threatIntelligenceSchema
-);
+export const Threat = mongoose.model("Threat", threatIntelligenceSchema);

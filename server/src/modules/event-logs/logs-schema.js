@@ -20,6 +20,13 @@ const logSchema = new mongoose.Schema({
   sender: String,
   recipient: String,
   anomalyDetected: String,
+  id: {
+    type: String,
+    default: function () {
+      return this._id;
+    },
+    index: true,
+  },
 });
 
 export const Log = mongoose.model("Log", logSchema);

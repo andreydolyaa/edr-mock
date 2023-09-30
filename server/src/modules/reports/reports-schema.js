@@ -39,6 +39,13 @@ const reportSchema = new mongoose.Schema({
   averageLatency: Number,
   networkDowntime: String,
   mostFrequentIssue: String,
+  id: {
+    type: String,
+    default: function () {
+      return this._id;
+    },
+    index: true,
+  },
 });
 
 export const Report = mongoose.model("Report", reportSchema);

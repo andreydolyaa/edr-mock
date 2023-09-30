@@ -2,18 +2,17 @@ import { ChevronLeft } from "../icons/ChevronLeft";
 import { ChevronRight } from "../icons/ChevronRight";
 
 const Toolbar = ({ name, handlePageChange, currentPage, dataLength, itemsPerPage }) => {
-  const firstPage = () => currentPage === 1;
-  const lastPage = () => dataLength < itemsPerPage;
-
   const pages = dataLength / itemsPerPage;
+  const firstPage = () => currentPage === 1;
+  const lastPage = () => currentPage === pages;
 
   const disabledStyle = {
     color: "rgb(140, 140, 140)",
-    cursor: "default"
+    cursor: "default",
   };
   const available = {
     color: "rgb(0, 255, 157)",
-    cursor: "pointer"
+    cursor: "pointer",
   };
 
   return (

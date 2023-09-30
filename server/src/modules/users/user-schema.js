@@ -35,6 +35,13 @@ const userActivitySchema = new mongoose.Schema({
   emailSubject: String,
   responseStatus: Number,
   details: mongoose.Schema.Types.Mixed,
+  id: {
+    type: String,
+    default: function () {
+      return this._id;
+    },
+    index: true,
+  },
 });
 
 export const UserActivity = mongoose.model("UserActivity", userActivitySchema);
