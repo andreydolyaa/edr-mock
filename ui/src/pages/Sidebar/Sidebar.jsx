@@ -12,9 +12,9 @@ const Sidebar = () => {
 
         {/* Security */}
         <Subtitle subtitle={"SECURITY"} />
-        <Category name={"Event Logs"} icon={"Pocket"} link={"event-logs"} />
-        <Category name={"Alerts"} icon={"AlertCircle"} link={"alerts"} />
-        <Category name={"Incident Management"} icon={"FileText"} link={"incidents"} />
+        <Category name={"Event Logs"} icon={"Shield"} link={"event-logs"} />
+        <Category name={"Alerts"} icon={"AlertTriangle"} link={"alerts"} />
+        <Category name={"Incident Management"} icon={"HardDrive"} link={"incidents"} />
         <Category name={"Threat Intelligence"} icon={"Package"} link={"threat-intl"} />
 
         {/* Network */}
@@ -23,7 +23,7 @@ const Sidebar = () => {
 
         {/* Users */}
         <Subtitle subtitle={"USERS"} />
-        <Category name={"Reports and Analytics"} icon={"HardDrive"} link={"reports"} />
+        <Category name={"Reports and Analytics"} icon={"BarChart2"} link={"reports"} />
         <Category name={"User Activity"} icon={"Users"} link={"users-activity"} />
 
         {/* Settings */}

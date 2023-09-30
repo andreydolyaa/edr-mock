@@ -9,6 +9,7 @@ const Category = ({ name, icon, link }) => {
         <div className="icon">{IconComponent && <IconComponent />}</div>
         <div>{name}</div>
       </div>
+      <div className="marker"></div>
     </NavLink>
   );
 };
