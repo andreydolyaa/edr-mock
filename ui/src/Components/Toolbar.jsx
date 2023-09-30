@@ -17,7 +17,8 @@ const Toolbar = ({ name, handlePageChange, currentPage, dataLength, itemsPerPage
 
   return (
     <div className="toolbar">
-      <div>{name}</div>
+      {name && <div>{name}</div>}
+      <div>{dataLength} ACTIVE EVENTS</div>
       <div className="buttons">
         <button
           onClick={() => handlePageChange(currentPage - 1)}

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Space+Mono&display=swap');
 @import url("./pages//Sidebar/Sidebar.scss");
 @import url("./pages//Topbar/Topbar.scss");
 @import url("./pages//EventLogs/EventLogs.scss");
@@ -19,21 +20,42 @@ body,
 #root,
 .App {
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .App {
   display: flex;
+  width: 100%;
+  word-break: break-all;
   .sub-app {
     background-color: #28303a;
     color: white;
     font-size: 14px;
     flex: 1;
+    width: 100%;
     .app-routes {
       padding: 40px;
+      width: 100%;
     }
   }
 }
 
 p {
   font-size: 14px;
+}
+
+.icon-chevronup {
+  color: white;
+  height: 18px;
+  width: 18px;
+}
+.rotate {
+  color: rgb(0, 255, 157);
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+.rotate-back {
+  transform: rotate(0deg);
+  transition: 0.3s;
 }

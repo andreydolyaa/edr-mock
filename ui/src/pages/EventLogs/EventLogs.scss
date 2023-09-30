@@ -1,7 +1,31 @@
 .logs {
-  // border: 1px solid red;
   .log {
     border-bottom: 1px solid rgb(34, 37, 44);
     padding: 20px 0;
+    color: rgb(192, 192, 192);
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 13px;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .details {
+      color: white;
+      font-size: 13px;
+      margin-top: 15px;
+      .msg {
+        font-family: "Space Mono";
+        padding: 15px 0;
+        .anomaly {
+          font-family: "Space Mono";
+          color: rgb(255, 99, 99);
+        }
+      }
+    }
   }
+  // .log:hover{
+  //   color:white;
+  // }
 }

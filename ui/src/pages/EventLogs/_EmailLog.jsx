@@ -1,5 +1,5 @@
 const EmailLog = ({ log }) => {
-  return <div className="log email-log">EmailLog {JSON.stringify(log)}</div>;
+  return <div className="log email-log">[{log.dateTime}] Email Security</div>;
 };
 
 export default EmailLog;

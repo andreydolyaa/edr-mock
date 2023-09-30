@@ -2,10 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
+  border-bottom: 1px solid rgb(81, 82, 82);
+  margin-bottom: 15px;
+  font-size: 12px;
   .buttons {
     display: flex;
     align-items: center;
-    font-size: 14px;
+    // font-size: 14px;
     button {
       border: none;
       background-color: transparent;
@@ -19,8 +23,8 @@
       width: 90px;
     }
     svg {
-      height: 20px;
-      width: 20px;
+      height: 18px;
+      width: 18px;
       stroke-width: 2.5;
     }
   }

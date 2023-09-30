@@ -18,7 +18,6 @@ const EventLogs = () => {
   useEffect(() => {
     dispatch(fetchEventLogs(currentPage, itemsPerPage));
     fetchModelCount(MODEL).then((count) => {
-      // console.log(count);
       setModelCount(count[MODEL]);
     });
   }, [dispatch, currentPage, itemsPerPage]);
@@ -33,7 +32,6 @@ const EventLogs = () => {
   return (
     <div className="logs">
       <Toolbar
-        name={"Event Type:"}
         handlePageChange={handlePageChange}
         currentPage={currentPage}
         dataLength={modelCount}

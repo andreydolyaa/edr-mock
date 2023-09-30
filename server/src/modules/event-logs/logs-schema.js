@@ -20,6 +20,7 @@ const logSchema = new mongoose.Schema({
   sender: String,
   recipient: String,
   anomalyDetected: String,
+  sourceIpRange: String,
   id: {
     type: String,
     default: function () {
