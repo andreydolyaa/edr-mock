@@ -2,15 +2,20 @@ import { useState } from "react";
 import { ChevronUp } from "../../icons/ChevronUp";
 // import { iconsMapping } from "../../icons/index"
 import { Monitor } from "../../icons/Monitor";
+import { Server } from "../../icons/Server";
 
 const Endpoint = ({ endpoint }) => {
   const [details, setDetails] = useState(false);
 
   const hostType = (name) => {
-    if (name.includes("workstation")) return <Monitor />;
+    if (
+      name.includes("workstation") ||
+      name.includes("laptop") ||
+      name.includes("desktop")
+    )
+      return <Monitor />;
+    if (name.includes("server")) return <Server />;
   };
-
-  hostType(endpoint.hostname);
 
   const showDetails = () => {
     setDetails(!details);

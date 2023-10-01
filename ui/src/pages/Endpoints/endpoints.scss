@@ -16,6 +16,20 @@
           height: 60px;
           width: 60px;
           margin-right: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: rgb(98, 112, 121);
+          svg {
+            .server-dot {
+              color: red;
+              animation: heartbeat 1s infinite;
+            }
+            .server-dot2 {
+              color: rgb(0, 255, 76);
+              animation: heartbeat .9s infinite;
+            }
+          }
         }
         .names {
           display: flex;
