@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import logsReducer from "./logs/logsSlice";
+import endpointsReducer from "./endpoints/endpointsSlice";
 
 export const store = configureStore({
   reducer: {
-    logs: logsReducer,
+    logs: endpointsReducer,
   },
 });

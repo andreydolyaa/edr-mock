@@ -21,6 +21,8 @@ const Toolbar = ({ name, handlePageChange, currentPage, dataLength, itemsPerPage
       <div>{dataLength} ACTIVE EVENTS</div>
       <div className="buttons">
         <button
+          data-tooltip-id="tooltip"
+          data-tooltip-content="Previous Page"
           onClick={() => handlePageChange(currentPage - 1)}
           style={firstPage() ? disabledStyle : available}
           disabled={firstPage()}
@@ -31,6 +33,8 @@ const Toolbar = ({ name, handlePageChange, currentPage, dataLength, itemsPerPage
           {currentPage} / {pages}
         </div>
         <button
+          data-tooltip-id="tooltip"
+          data-tooltip-content="Next Page"
           onClick={() => handlePageChange(currentPage + 1)}
           style={lastPage() ? disabledStyle : available}
           disabled={lastPage()}

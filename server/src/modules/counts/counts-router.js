@@ -1,4 +1,4 @@
-import express, { Router } from "express";
+import express from "express";
 import { countDocumentsController } from "./counts-controller.js";
 
 const router = express.Router();

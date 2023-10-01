@@ -1,19 +1,11 @@
-import { Log } from "../event-logs/logs-schema.js";
-import { Alert } from "../alerts/alert-schema.js";
-import { Incident } from "../incidents/incident-schema.js";
-import { Threat } from "../threat-intelligence/threat-schema.js";
-import { Network } from "../network/network-schema.js";
-import { Report } from "../reports/reports-schema.js";
-import { UserActivity } from "../users/user-schema.js";
+import { Endpoint } from "../endpoints/endpoints-schema.js";
+import { Alert } from "../alerts/alerts-schema.js";
+import { Incident } from "../incidents/incidents-schema.js";
 
 const modelsMap = {
-  Log,
+  Endpoint,
   Alert,
   Incident,
-  Threat,
-  Network,
-  Report,
-  UserActivity,
 };
 
 export const countDocumentsController = async (req, res) => {

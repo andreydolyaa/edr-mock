@@ -5,7 +5,7 @@ const Logo = () => {
       <div className="icon">
         <Hexagon />
       </div>
-      <h1>SIEM<span className="underscore"></span></h1>
+      <h1>EDR<span className="underscore"></span></h1>
     </div>
   );
 };

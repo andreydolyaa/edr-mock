@@ -8,8 +8,8 @@ const initialState = {
   itemsPerPage: 10,
 };
 
-const logsSlice = createSlice({
-  name: "logs",
+const endpointsSlice = createSlice({
+  name: "endpoints",
   initialState,
   reducers: {
     setData: (state, action) => {
@@ -31,5 +31,5 @@ const logsSlice = createSlice({
   extraReducers: () => {},
 });
 
-export const { setData, setLoading, setError, updatePage } = logsSlice.actions;
-export default logsSlice.reducer;
+export const { setData, setLoading, setError, updatePage } = endpointsSlice.actions;
+export default endpointsSlice.reducer;
