@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ChevronUp } from "../../icons/ChevronUp";
-// import { iconsMapping } from "../../icons/index"
 import { Monitor } from "../../icons/Monitor";
 import { Server } from "../../icons/Server";
+import Details from "./Details/Details";
 
 const Endpoint = ({ endpoint }) => {
   const [details, setDetails] = useState(false);
@@ -23,7 +23,6 @@ const Endpoint = ({ endpoint }) => {
 
   return (
     <div className="endpoint" onClick={() => showDetails()}>
-      {details}
       <div className="title">
         <div className="items">
           <div className="endpoint-icon">{hostType(endpoint.hostname)}</div>
@@ -34,17 +33,7 @@ const Endpoint = ({ endpoint }) => {
         </div>
         <ChevronUp conditional={details ? "rotate" : "rotate-back"} />
       </div>
-      {details && (
-        <div className="details fade-in">
-          {/* <div className="msg">
-            Anomaly Detected: <span className="anomaly">{log.anomalyDetected}</span>
-          </div>
-          <div className="msg">Source IP Range: {log.sourceIpRange}</div>
-          <div className="msg">Protocol: {log.protocol}</div>
-          <div className="msg">Log ID: {log.id}</div>
-          <div className="msg">Original Timestamp: {log.dateTime}</div> */}
-        </div>
-      )}
+      {details && <Details endpoint={endpoint} />}
     </div>
   );
 };

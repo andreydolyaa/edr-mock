@@ -13,6 +13,7 @@ class Server {
     this.app = express();
     this.app.use(cors());
     this.app.use(express.json());
+    this.app.use(this.logRequests);
     this.app.use(this.router);
     this.server = http.createServer(this.app);
     this.wsServer = new WebSocketServer({ server: this.server });
@@ -40,10 +41,27 @@ class Server {
       socket.on("close", () => this.onclose(socket));
     });
   }
+
+  logRequests(req, res, next) {
+    const method = req.method;
+    const url = req.url;
+    const ip = req.ip;
+    log.info(`${ip} - ${method} ${url}`);
+
+    res.on("finish", () => {
+      const responseStatus = res.statusCode;
+      log.info(`${ip} - Response Status: ${responseStatus} for ${method} ${url}`);
+    });
+
+    next();
+  }
+
   connection(socket) {
     const sessionId = uuidv4();
     this.clients[sessionId] = socket;
-    log.info(`Client Connected [Session-ID: ${sessionId}] (${this.countConnectedClients()})`);
+    log.info(
+      `Client Connected [Session-ID: ${sessionId}] (${this.countConnectedClients()})`
+    );
     socket.send(JSON.stringify({ type: "session", sessionId }));
   }
   onmessage(message, socket) {
@@ -65,7 +83,9 @@ class Server {
   onclose(socket) {
     const sessionId = this.findSession(socket);
     delete this.clients[sessionId];
-    log.info(`Client Disconnected [Session-ID: ${sessionId}] (${this.countConnectedClients()})`);
+    log.info(
+      `Client Disconnected [Session-ID: ${sessionId}] (${this.countConnectedClients()})`
+    );
   }
   findSession(socket) {
     for (const sessionId in this.clients) {

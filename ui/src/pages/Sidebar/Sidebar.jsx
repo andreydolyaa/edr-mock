@@ -9,7 +9,7 @@ const Sidebar = () => {
       <div className="categories">
         {/* Dashboard */}
         <Subtitle subtitle={"ENDPOINTS"} />
-        <Category name={"Endpoints"} icon={"Monitor"} link={"/"} />
+        <Category name={"Endpoint Security"} icon={"Monitor"} link={"/"} />
         <Category name={"Dashboard"} icon={"PieChart"} link={"/dashboard"} />
 
         {/* Security */}
