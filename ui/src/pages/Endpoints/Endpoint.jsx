@@ -22,8 +22,8 @@ const Endpoint = ({ endpoint }) => {
   };
 
   return (
-    <div className="endpoint" onClick={() => showDetails()}>
-      <div className="title">
+    <div className="endpoint">
+      <div className="title" onClick={() => showDetails()}>
         <div className="items">
           <div className="endpoint-icon">{hostType(endpoint.hostname)}</div>
           <div className="names">
